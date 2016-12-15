@@ -8,11 +8,16 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Button;
 import android.widget.Toast;
+import org.opencv.core.Mat;
+import org.opencv.BuildConfig;
 
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        final BuildConfig get = new BuildConfig();
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -28,17 +33,19 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Right", Toast.LENGTH_SHORT).show();
             }
         });
-        final Button button3 = (Button) findViewById(R.id.button3);
+        final Button button3 = (Button) findViewById(R.id.button4);
         button3.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Down", Toast.LENGTH_SHORT).show();
-            }
-        });
-        final Button button4 = (Button) findViewById(R.id.button4);
-        button4.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Left", Toast.LENGTH_SHORT).show();
             }
         });
+        final Button button4 = (Button) findViewById(R.id.button3);
+        button4.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), get.VERSION_NAME , Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
 }
 }

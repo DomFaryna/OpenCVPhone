@@ -38,7 +38,7 @@
         android:layout_toStartOf="@+id/button1" />
 
     <Button
-        android:text="Down"
+        android:text="GetVersionNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/button4"
